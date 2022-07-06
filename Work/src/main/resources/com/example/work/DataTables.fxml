@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="762.0" prefWidth="1366.0" style="-fx-background-color: #36393f;" stylesheets="@forTables.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.work.ClientAdder">
+    <children>
+        <AnchorPane layoutX="-6.0" prefHeight="57.0" prefWidth="1374.0" style="-fx-background-color: #2f3136;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Button fx:id="Back" layoutX="1255.0" layoutY="9.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="97.0" text="Назад" textFill="#f2ebeb" AnchorPane.rightAnchor="14.0">
+                    <font>
+                        <Font name="Microsoft Sans Serif" size="20.0" />
+                    </font>
+                </Button>
+                <Label layoutX="14.0" layoutY="11.0" prefHeight="32.0" prefWidth="195.0" text="Таблицы" textFill="#f2ebeb">
+                    <font>
+                        <Font name="Microsoft Sans Serif" size="27.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+      <TabPane fx:id="TabPan" layoutY="57.0" prefHeight="706.0" prefWidth="1366.0" style="-fx-outer-border: #202225; -fx-text-box-border: #2f3136;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="57.0">
+        <tabs>
+          <Tab fx:id="tabBase" style="-fx-background-color: #393c43; -fx-text-base-color: #f2ebeb; -fx-font-family: SansSerif; -fx-font-size: 14;" text="Основная таблица">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="671.0" prefWidth="1366.0" style="-fx-background-color: #2f3136;">
+                     <children>
+                        <TableView fx:id="basicTable" layoutY="-1.0" prefHeight="541.0" prefWidth="1366.0" style="-fx-font-family: SansSerif; -fx-font-size: 13; -fx-background-color: #36393f; " AnchorPane.bottomAnchor="136.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                              <TableColumn fx:id="ID" prefWidth="42.0" style="-fx-background-color: #36393f; -fx-text-fill: #f2ebeb; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="ID" />
+                            <TableColumn fx:id="RabotnikTable" prefWidth="85.0" style="-fx-background-color: #36393f; -fx-text-fill: #f2ebeb; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="Работник" />
+                            <TableColumn fx:id="DataSnyatya" prefWidth="94.0" style="-fx-background-color: #36393f; -fx-text-fill: #f2ebeb; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="Дата снятия" />
+                              <TableColumn fx:id="AdressTable" prefWidth="156.0" style="-fx-background-color: #36393f; -fx-text-fill: #f2ebeb; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="Адрес" />
+                              <TableColumn fx:id="PriborTable" prefWidth="105.0" style="-fx-background-color: #36393f; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="Прибор" />
+                              <TableColumn fx:id="ZavodNumberTable" prefWidth="128.0" style="-fx-background-color: #36393f; -fx-text-fill: #f2ebeb; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="Заводской номер" />
+                              <TableColumn fx:id="PokBeginTable" prefWidth="122.0" style="-fx-background-color: #36393f; -fx-text-fill: #f2ebeb; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="Показания начало" />
+                              <TableColumn fx:id="PokEndTable" prefWidth="122.0" style="-fx-background-color: #36393f; -fx-text-fill: #f2ebeb; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="Показания конец" />
+                              <TableColumn fx:id="EdinTable" prefWidth="95.0" style="-fx-background-color: #36393f; -fx-text-fill: #f2ebeb; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="Единицы измерения" />
+                              <TableColumn fx:id="PriceTable" prefWidth="110.0" style="-fx-background-color: #36393f; -fx-text-fill: #f2ebeb; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="Сумма договора" />
+                              <TableColumn fx:id="ClientTable" minWidth="5.0" prefWidth="178.0" style="-fx-background-color: #36393f; -fx-text-fill: #f2ebeb; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="Заказчик" />
+                              <TableColumn fx:id="NumberTable" minWidth="7.0" prefWidth="128.0" style="-fx-background-color: #36393f; -fx-text-fill: #f2ebeb; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="№ телефона" />
+                              <TableColumn fx:id="ChoiceBankTable" prefWidth="95.0" style="-fx-background-color: #36393f; -fx-text-fill: #f2ebeb; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="Оплата" />
+                              <TableColumn fx:id="GoodOrBadTable" prefWidth="95.0" style="-fx-background-color: #36393f; -fx-text-fill: #f2ebeb; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="Годность" />
+                              <TableColumn fx:id="NewSumTable" prefWidth="95.0" style="-fx-background-color: #36393f; -fx-text-fill: #f2ebeb; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="Новая сумма" />
+                              <TableColumn fx:id="NewPriborTable" prefWidth="95.0" style="-fx-background-color: #36393f; -fx-text-fill: #f2ebeb; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="Новый прибор" />
+                              <TableColumn fx:id="BataryaBeginTable" prefWidth="114.0" style="-fx-background-color: #36393f; -fx-text-fill: #f2ebeb; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="Батарея была" />
+                              <TableColumn fx:id="BataryaEndTable" prefWidth="111.0" style="-fx-background-color: #36393f; -fx-text-fill: #f2ebeb; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="Батарея стала" />
+                              <TableColumn fx:id="DataZameniTable" minWidth="5.0" prefWidth="125.0" style="-fx-background-color: #36393f; -fx-text-fill: #f2ebeb; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="Дата замены" />
+                              <TableColumn fx:id="DataSending" minWidth="7.0" prefWidth="161.0" style="-fx-background-color: #36393f; -fx-text-fill: #f2ebeb; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="Дата отправления" />
+                              <TableColumn fx:id="NumberNakladTable" prefWidth="116.0" style="-fx-background-color: #36393f; -fx-text-fill: #f2ebeb; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="Номер накладной" />
+                              <TableColumn fx:id="DataMontajTable" prefWidth="157.0" style="-fx-background-color: #36393f; -fx-text-fill: #f2ebeb; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="Дата монтажа" />
+                              <TableColumn fx:id="DEntrecesjTable" prefWidth="157.0" style="-fx-background-color: #36393f; -fx-text-fill: #f2ebeb; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="Дата поступления" />
+                              <TableColumn fx:id="LinkDocTable" prefWidth="157.0" style="-fx-background-color: #36393f; -fx-text-fill: #f2ebeb; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="Ссылка" />
+                          </columns>
+                        </TableView>
+                          <Button fx:id="addClient" layoutX="1021.0" layoutY="556.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="160.0" style="-fx-background-radius: 7;" text="Добавить" textFill="#f2ebeb" AnchorPane.bottomAnchor="91.0" AnchorPane.rightAnchor="185.0">
+                              <font>
+                                  <Font name="Microsoft Sans Serif" size="16.0" />
+                              </font>
+                          </Button>
+                          <Button fx:id="removeClient" layoutX="1192.0" layoutY="622.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="160.0" style="-fx-background-radius: 7;" text="Удалить" textFill="#f2ebeb" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="14.0">
+                              <font>
+                                  <Font name="Microsoft Sans Serif" size="16.0" />
+                              </font>
+                          </Button>
+                        <TextField fx:id="ZavodNumber" layoutX="683.0" layoutY="586.0" prefHeight="25.0" prefWidth="160.0" promptText="Заводской номер" AnchorPane.bottomAnchor="67.0" AnchorPane.leftAnchor="683.0" />
+                        <TextField fx:id="adress" layoutX="349.0" layoutY="586.0" prefHeight="25.0" prefWidth="160.0" promptText="Адрес" AnchorPane.bottomAnchor="67.0" AnchorPane.leftAnchor="349.0" />
+                        <DatePicker fx:id="dataDrawal" layoutX="181.0" layoutY="582.0" prefHeight="25.0" prefWidth="160.0" promptText="Дата снятия" style="-fx-background-color: #2f3136;" AnchorPane.bottomAnchor="67.0" AnchorPane.leftAnchor="181.0" />
+                        <TextField fx:id="Price" layoutX="251.0" layoutY="614.0" prefHeight="25.0" prefWidth="110.0" promptText="Сумма договора" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="246.0" />
+                        <TextField fx:id="Client" layoutX="367.0" layoutY="614.0" prefHeight="25.0" prefWidth="75.0" promptText="Заказчик" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="361.0" />
+                        <TextField fx:id="Number" layoutX="450.0" layoutY="614.0" prefHeight="25.0" prefWidth="114.0" promptText="Номер телефона" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="441.0" />
+                        <Button fx:id="changeClient" layoutX="1192.0" layoutY="574.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="160.0" style="-fx-background-radius: 7;" text="Изменить" textFill="#f2ebeb" AnchorPane.bottomAnchor="91.0" AnchorPane.rightAnchor="14.0">
+                           <font>
+                              <Font name="Microsoft Sans Serif" size="16.0" />
+                           </font>
+                        </Button>
+                        <ComboBox fx:id="ChoiceRabot" layoutX="15.0" layoutY="586.0" prefHeight="24.0" prefWidth="160.0" promptText="Работник" AnchorPane.bottomAnchor="67.0" AnchorPane.leftAnchor="15.0" />
+                        <TextField fx:id="ValueBegins" layoutX="850.0" layoutY="586.0" prefWidth="160.0" promptText="Показания начало" AnchorPane.bottomAnchor="67.0" AnchorPane.leftAnchor="850.0" />
+                        <TextField fx:id="ValueEnds" layoutX="14.0" layoutY="614.0" prefHeight="25.0" prefWidth="111.0" promptText="Показания конец" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="14.0" />
+                        <ComboBox fx:id="ChoicePribors" layoutX="515.0" layoutY="586.0" prefHeight="20.0" prefWidth="160.0" promptText="Прибор" AnchorPane.bottomAnchor="67.0" AnchorPane.leftAnchor="515.0" />
+                        <ComboBox fx:id="ChoiceBanks" layoutX="570.0" layoutY="614.0" prefHeight="25.0" prefWidth="83.0" promptText="Оплата" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="560.0" />
+                        <TextField fx:id="BataryBegin" layoutX="15.0" layoutY="644.0" prefHeight="25.0" prefWidth="91.0" promptText="Батарея была" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="15.0" />
+                        <TextField fx:id="BataryaEnd" layoutX="112.0" layoutY="644.0" prefHeight="25.0" prefWidth="94.0" promptText="Батарея стала" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="111.0" />
+                        <DatePicker fx:id="DataSend" layoutX="334.0" layoutY="644.0" prefHeight="25.0" prefWidth="140.0" promptText="Дата отправления" style="-fx-background-color: #2f3136;" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="326.0" />
+                        <DatePicker fx:id="DataZameni" layoutX="212.0" layoutY="644.0" prefHeight="25.0" prefWidth="112.0" promptText="Дата замены" style="-fx-background-color: #2f3136;" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="210.0" />
+                        <TextField fx:id="NumberNaklad" layoutX="469.0" layoutY="644.0" prefHeight="25.0" prefWidth="115.0" promptText="Номер накладной" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="471.0" />
+                        <DatePicker fx:id="DataMontaj" layoutX="595.0" layoutY="644.0" prefHeight="25.0" prefWidth="121.0" promptText="Дата монтажа" style="-fx-background-color: #2f3136;" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="591.0" />
+                        <ComboBox fx:id="GoodOrBadChoicer" layoutX="683.0" layoutY="614.0" prefHeight="25.0" prefWidth="97.0" promptText="Годность" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="648.0" />
+                        <TextField fx:id="NewPrice" layoutX="787.0" layoutY="614.0" prefHeight="25.0" prefWidth="112.0" promptText="Новая сумма" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="750.0" />
+                        <ComboBox fx:id="SearchCategory" layoutX="15.0" layoutY="554.0" prefHeight="19.0" prefWidth="161.0" promptText="Категория поиска" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="15.0" />
+                        <TextField fx:id="Search" layoutX="181.0" layoutY="552.0" prefHeight="25.0" prefWidth="662.0" promptText="Поиск" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="181.0" />
+                        <Button fx:id="refresh" layoutX="850.0" layoutY="554.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="160.0" style="-fx-background-radius: 7;" text="обновить" textAlignment="CENTER" textFill="#f2ebeb" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="850.0">
+                           <font>
+                              <Font name="Microsoft Sans Serif" size="14.0" />
+                           </font>
+                        </Button>
+                        <ComboBox fx:id="NewPriborChoice" layoutX="868.0" layoutY="614.0" prefHeight="25.0" prefWidth="143.0" promptText="Новый прибор" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="868.0" />
+                        <ComboBox fx:id="Izmer" layoutX="134.0" layoutY="614.0" prefHeight="25.0" prefWidth="111.0" promptText="ед.Измерения" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="130.0" />
+                        <MenuButton layoutX="1021.0" layoutY="622.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="32.0" prefWidth="160.0" style="-fx-background-radius: 7; -fx-background-color: #5865f2;" text="          Печать" textAlignment="CENTER" textFill="#f2ebeb" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="185.0">
+                          <items>
+                            <MenuItem fx:id="print" mnemonicParsing="false">
+                                 <graphic>
+                                    <Button fx:id="PrintClientOne" minWidth="70.0" mnemonicParsing="false" style="-fx-background-radius: 7;" text="МВтч" textFill="#f2ebeb">
+                                       <font>
+                                          <Font name="Microsoft Sans Serif" size="12.0" />
+                                       </font>
+                                    </Button>
+                                 </graphic>
+                              </MenuItem>
+                            <MenuItem fx:id="printTwo" mnemonicParsing="false">
+                                 <graphic>
+                                    <Button fx:id="PrintClientTwo" mnemonicParsing="false" style="-fx-background-radius: 7;" text="Гкал" textFill="#f2ebeb">
+                                       <font>
+                                          <Font name="Microsoft Sans Serif" size="12.0" />
+                                       </font>
+                                    </Button>
+                                 </graphic>
+                              </MenuItem>
+                          </items>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </MenuButton>
+                        <DatePicker fx:id="DEntreces" layoutX="723.0" layoutY="644.0" prefHeight="25.0" prefWidth="139.0" promptText="Дата поступления" style="-fx-background-color: #2f3136;" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="716.0" />
+                        <Button fx:id="ExcelDownload" layoutX="1021.0" layoutY="639.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="331.0" style="-fx-background-radius: 7;" text="Загрузить excel" textFill="#f2ebeb" AnchorPane.bottomAnchor="9.0" AnchorPane.rightAnchor="14.0">
+                           <font>
+                              <Font name="Microsoft Sans Serif" size="16.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="LinkText" layoutX="860.0" layoutY="644.0" prefHeight="25.0" prefWidth="152.0" promptText="Ссылка" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="860.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab style="-fx-background-color: #393c43; -fx-text-base-color: #f2ebeb; -fx-font-family: SansSerif; -fx-font-size: 14;" text="Заявки">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #36393f;">
+                     <children>
+                        <TableView fx:id="ZayavkaTable" layoutX="319.0" prefHeight="677.0" prefWidth="1047.0" style="-fx-font-family: SansSerif; -fx-font-size: 13; -fx-background-color: #36393f; " AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="319.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columns>
+                              <TableColumn fx:id="IDZav" prefWidth="44.0" style="-fx-background-color: #36393f; -fx-text-fill: #f2ebeb; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="ID" />
+                              <TableColumn fx:id="ClientTableZav" minWidth="5.0" prefWidth="205.0" style="-fx-background-color: #36393f; -fx-text-fill: #f2ebeb; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="Заказчик" />
+                              <TableColumn fx:id="AdressTableZav" prefWidth="166.0" style="-fx-background-color: #36393f; -fx-text-fill: #f2ebeb; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="Адрес" />
+                              <TableColumn fx:id="NumberTableZav" minWidth="7.0" prefWidth="137.0" style="-fx-background-color: #36393f; -fx-text-fill: #f2ebeb; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="№ телефона" />
+                              <TableColumn fx:id="PriborTableZav" prefWidth="121.0" style="-fx-background-color: #36393f; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="Прибор" />
+                              <TableColumn fx:id="Status" prefWidth="201.0" style="-fx-background-color: #36393f; -fx-text-fill: #f2ebeb; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="Статус" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="ClientZav" layoutX="28.0" layoutY="64.0" prefHeight="25.0" prefWidth="228.0" promptText="Заказчик" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="64.0" />
+                        <TextField fx:id="adressZav" layoutX="28.0" layoutY="107.0" prefHeight="25.0" prefWidth="228.0" promptText="Адрес" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="107.0" />
+                        <TextField fx:id="NumberZav" layoutX="28.0" layoutY="148.0" prefHeight="25.0" prefWidth="228.0" promptText="Номер телефона" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="148.0" />
+                        <ComboBox fx:id="ChoicePriborsZav" layoutX="28.0" layoutY="189.0" prefHeight="25.0" prefWidth="228.0" promptText="Прибор" style="-fx-background-radius: 5; -fx-background-color: #f2ebeb;" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="189.0" />
+                        <Button fx:id="addClientZav" layoutX="62.0" layoutY="234.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="160.0" style="-fx-background-radius: 7;" text="Добавить" textFill="#f2ebeb" AnchorPane.leftAnchor="62.0" AnchorPane.topAnchor="234.0">
+                           <font>
+                              <Font name="Microsoft Sans Serif" size="16.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="RemoveClientZav" layoutX="62.0" layoutY="272.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="160.0" style="-fx-background-radius: 7;" text="Удалить" textFill="#f2ebeb" AnchorPane.leftAnchor="62.0" AnchorPane.topAnchor="272.0">
+                           <font>
+                              <Font name="Microsoft Sans Serif" size="16.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="RemoveAllClientZav" layoutX="62.0" layoutY="308.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="160.0" style="-fx-background-radius: 7;" text="Очистить" textFill="#f2ebeb" AnchorPane.leftAnchor="62.0" AnchorPane.topAnchor="310.0">
+                           <font>
+                              <Font name="Microsoft Sans Serif" size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab style="-fx-background-color: #393c43; -fx-text-base-color: #f2ebeb; -fx-font-family: SansSerif; -fx-font-size: 14;" text="Работники">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #2f3136;">
+                     <children>
+                        <TableView fx:id="Rabotniki" prefHeight="569.0" prefWidth="1366.0" style="-fx-background-color: #36393f; -fx-font-family: SansSerif; -fx-font-size: 13;" AnchorPane.bottomAnchor="107.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columns>
+                              <TableColumn fx:id="RabFamTable" prefWidth="670.0" style="-fx-background-color: #36393f; -fx-text-fill: #f2ebeb; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="Фамилия" />
+                              <TableColumn fx:id="RabNumberTable" prefWidth="695.0" style="-fx-background-color: #36393f; -fx-text-fill: #f2ebeb; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="Номер телефона" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="RabFam" layoutX="41.0" layoutY="580.0" prefHeight="25.0" prefWidth="454.0" promptText="ФИО" AnchorPane.bottomAnchor="68.0" AnchorPane.leftAnchor="14.0" />
+                        <TextField fx:id="RabNumber" layoutX="41.0" layoutY="615.0" prefHeight="25.0" prefWidth="454.0" promptText="Номер телефона" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="14.0" />
+                        <Button fx:id="AddRab" layoutX="518.0" layoutY="593.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" style="-fx-background-radius: 7;" text="Добавить" textFill="#f2ebeb" AnchorPane.bottomAnchor="54.0" AnchorPane.rightAnchor="14.0">
+                           <font>
+                              <Font name="Microsoft Sans Serif" size="17.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="DeleteRab" layoutX="715.0" layoutY="593.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="186.0" style="-fx-background-radius: 7;" text="Удалить" textFill="#f2ebeb" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0">
+                           <font>
+                              <Font name="Microsoft Sans Serif" size="17.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="CounntTable" style="-fx-background-color: #393c43; -fx-text-base-color: #f2ebeb; -fx-font-family: SansSerif; -fx-font-size: 14;" text="Счётчики">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #2f3136;">
+                     <children>
+                        <TableView fx:id="TableCounters" prefHeight="569.0" prefWidth="1366.0" style="-fx-background-color: #36393f; -fx-font-family: SansSerif; -fx-font-size: 13;" AnchorPane.bottomAnchor="107.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columns>
+                              <TableColumn fx:id="NameCountTable" prefWidth="685.0" style="-fx-background-color: #36393f; -fx-text-fill: #f2ebeb; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="Название счётчика" />
+                              <TableColumn fx:id="DopInfo" minWidth="7.0" prefWidth="680.0" style="-fx-background-color: #36393f; -fx-text-fill: #f2ebeb; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="Дополнительные сведения" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="NameCount" layoutX="32.0" layoutY="578.0" prefHeight="25.0" prefWidth="454.0" promptText="Название" AnchorPane.bottomAnchor="68.0" AnchorPane.leftAnchor="14.0" />
+                        <TextField fx:id="NomerCount" layoutX="32.0" layoutY="617.0" prefHeight="25.0" prefWidth="454.0" promptText="Доп. Сведения" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="14.0" />
+                        <Button fx:id="AddCount" layoutX="518.0" layoutY="589.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="186.0" style="-fx-background-radius: 7;" text="Добавить" textFill="#f2ebeb" AnchorPane.bottomAnchor="54.0" AnchorPane.rightAnchor="14.0">
+                           <font>
+                              <Font name="Microsoft Sans Serif" size="17.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="DeleteCount" layoutX="1166.0" layoutY="634.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="186.0" style="-fx-background-radius: 7;" text="Удалить" textFill="#f2ebeb" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0">
+                           <font>
+                              <Font name="Microsoft Sans Serif" size="17.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab style="-fx-background-color: #393c43; -fx-text-base-color: #f2ebeb; -fx-font-family: SansSerif; -fx-font-size: 14;" text="Способы оплаты">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #2f3136;">
+                     <children>
+                        <TableView fx:id="Bank" prefHeight="569.0" prefWidth="1366.0" style="-fx-background-color: #36393f; -fx-font-family: SansSerif; -fx-font-size: 13;" AnchorPane.bottomAnchor="107.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columns>
+                              <TableColumn fx:id="BankTable" prefWidth="1365.0" style="-fx-background-color: #36393f; -fx-text-fill: #f2ebeb; -fx-text-background-color: #f2ebeb; -fx-font-family: SansSerif;" text="Способ оплаты" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="BankVvod" layoutX="22.0" layoutY="598.0" prefHeight="25.0" prefWidth="252.0" promptText="Способ оплаты" AnchorPane.bottomAnchor="53.0" AnchorPane.leftAnchor="22.0" />
+                        <Button fx:id="AddBank" layoutX="288.0" layoutY="582.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="230.0" style="-fx-background-radius: 7;" text="Добавить" textFill="#f2ebeb" AnchorPane.bottomAnchor="62.0" AnchorPane.leftAnchor="288.0">
+                           <font>
+                              <Font name="Microsoft Sans Serif" size="17.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="DeleteBank" layoutX="288.0" layoutY="623.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="230.0" style="-fx-background-radius: 7;" text="Удалить" textFill="#f2ebeb" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="288.0">
+                           <font>
+                              <Font name="Microsoft Sans Serif" size="17.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+    </children>
+</AnchorPane>
